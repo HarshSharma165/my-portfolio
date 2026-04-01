@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: white;
+}
+
+/* NAVBAR */
+nav {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 50px;
+  align-items: center;
+}
+
+.logo{
+  font-family: sans-serif;
+  
+}
+
+.logo span {
+  color: #ff4d5a;
+}
+
+
+/* LINKS */
+.links {
+  display: flex;
+  gap: 25px;
+}
+
+.link {
+  color: white;
+  font-family: sans-serif;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #ff4d5a;
+}
+
+.link:active{
+  color:#ff7a18 ;
+}
+
+.links a{
+  
+  color: white;
+  text-decoration: none;
+}
+
+
+
+/* HERO */
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 50px;
+  gap: 50px;
+}
+
+.image img {
+  width: 350px;
+  border-radius: 50%;
+  box-shadow: 0 0 40px #ff4d5a;
+}
+
+.content {
+  max-width: 500px;
+}
+
+.content h1 {
+  font-size: 2.5rem;
+}
+
+.content h1 span {
+  color: #ff4d5a;
+}
+
+.typewriter {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.typewriter-text {
+  color: #ff4d5a;
+}
+
+/* BUTTON */
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: linear-gradient(45deg, #ff4d5a, #ff7a18);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ff4d5a;
+}
+
+/* SOCIAL */
+.social-links i {
+  margin: 10px;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 50%;
+  background: #222;
+  transition: 0.3s;
+}
+
+.social-links i:hover {
+  background: #ff4d5a;
+}
+
+/* SECTION */
+section {
+  padding: 100px 50px;
+}
+
+/* TITLES (FIXED) */
+.title {
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.title span {
+  font-size: 3rem; /* bigger and more visible */
+  color: #ff4d5a;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  text-shadow: 0 0 10px rgba(255, 77, 90, 0.6);
+}
+
+.title span::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 4px;
+  background: #ff4d5a;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* ABOUT */
+.about-details {
+  display: flex;
+  gap: 40px;
+}
+
+.about-details img {
+  width: 300px;
+  border-radius: 15px;
+}
+
+.about-details .right {
+  line-height: 1.6;
+}
+
+/* SKILLS */
+.skills .boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.skills .box {
+  width: 200px;
+  padding: 20px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.skills .box:hover {
+  transform: translateY(-10px);
+  background: #ff4d5a;
+}
+
+/* projects */
+.projects .boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.projects .box {
+  min-width: 250px;
+  width: 30%;
+  padding: 25px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.projects .box:hover {
+  transform: translateY(-10px);
+  background: linear-gradient(45deg, #ff4d5a, #ff7a18);
+}
+
+.box a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+}
+
+.box a:hover {
+  text-decoration: underline;
+}
+
+/* CONTACT */
+.contact .text {
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+}
+
+/* MOBILE */
+@media(max-width: 768px) {
+  .main-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .hamburg {
+    display: block;
+  }
+
+  .image img {
+    width: 250px;
+  }
+
+  .about-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills .boxes,
+  .projects .boxes {
+    justify-content: center;
+  }
+
+  .projects .box {
+    width: 100%;
+  }
+}
+
+/* FIX CONTAINER WIDTH */
+.nav-container,
+.main-container,
+section .content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* DROPDOWN MENU */
+.dropdown {
+  position: absolute;
+  top: -500px;
+  left: 0;
+  width: 100%;
+  background: #111;
+  text-align: center;
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.dropdown .links {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown a {
+  padding: 15px;
+  display: block;
+  color: white;
+  border-bottom: 1px solid #222;
+}
+
+.dropdown a:hover {
+  background: #ff4d5a;
+}
+
+/* HAMBURGER */
+.hamburg,
+.cancel {
+  display: none;
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
+}
